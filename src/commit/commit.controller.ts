@@ -1,4 +1,12 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
+import { CommitService } from './commit.service';
 
 @Controller('commit')
-export class CommitController {}
+export class CommitController {
+  constructor(private readonly commitService: CommitService) {}
+
+  @Get('list-commit')
+  async getListCommit() {
+    return await this.commitService.getListCommit();
+  }
+}
