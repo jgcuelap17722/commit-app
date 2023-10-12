@@ -1,15 +1,15 @@
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import axios from 'axios';
-import { CommitMapper } from 'src/commit/application/usecases/commit.mapper';
+import { CommitMapper } from 'src/commit/application/commit.mapper';
 import { CommitEntity } from 'src/commit/models/commit.entity';
 import { format } from 'date-fns';
 
 @Injectable()
 export class GithubApiService {
   constructor(private readonly _commitMapper: CommitMapper) {}
-  async getCommits() {
+  async getCommits(repository: string) {
     try {
-      const { GITHUB_API_URL_COMMITS, GITHUB_API_KEY } = process.env;
+      const { GITHUB_API_KEY } = process.env;
 
       const axiosConfig = {
         headers: {
@@ -17,10 +17,7 @@ export class GithubApiService {
         },
       };
 
-      const response = await axios.get(
-        `${GITHUB_API_URL_COMMITS}`,
-        axiosConfig,
-      );
+      const response = await axios.get(`${repository}`, axiosConfig);
 
       const finalResponse: CommitEntity[] = response.data.map((commit: any) => {
         return {
