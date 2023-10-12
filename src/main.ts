@@ -5,7 +5,7 @@ import { setupSwagger } from './utils/setup-swagger';
 
 async function bootstrap() {
   const logger = new Logger();
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { cors: true });
 
   app.setGlobalPrefix('api');
 
