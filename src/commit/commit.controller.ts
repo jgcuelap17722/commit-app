@@ -6,8 +6,13 @@ import { ApiTags } from '@nestjs/swagger';
 export class CommitController {
   constructor(private readonly commitService: CommitService) {}
 
-  @Get('list-commit')
-  async getListCommit() {
-    return await this.commitService.getListCommit();
+  @Get('list-commit-back')
+  async getListCommitBack() {
+    return await this.commitService.getListCommitBack();
+  }
+
+  @Get('list-commit-front')
+  async getListCommitFront() {
+    return await this.commitService.getListCommitFront();
   }
 }
