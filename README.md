@@ -47,7 +47,7 @@ $ npm run start:prod
 
 ## Stay in touch
 
-- Author - [Jose Cuela](https://kamilmysliwiec.com)
+- Author - [Jose Cuela](https://github.com/jgcuelap17722)
 - Linkedin - [Jose Cuela](https://www.linkedin.com/in/jose-cuela-dev/)
 
 ## License
