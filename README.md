@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://i.imgur.com/l5nZVAe.png" width="200" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://i.imgur.com/l5nZVAe.png" width="400" alt="Nest Logo" /></a>
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
@@ -24,7 +24,7 @@
 
 ## Description
 
-Commit App Es una aplicación del historial de commits del front y backend de la misma aplicación, hecha con tecnologías Angular, NestJs, Tailwind
+Commit App It is an application of the commit history of the front and backend of the same application, made with Angular, NestJs, Tailwind technologies.
 
 ## Installation
 
@@ -44,10 +44,6 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
 ## Stay in touch
 
